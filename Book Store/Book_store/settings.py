@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
+    #locals
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'bookstore',
         'USER': 'yusuf',
-        'PASSWORD': 'postgres1',
+        'PASSWORD': '<postgres1>',
         'HOST': 'localhost',
         'PORT': 5432,
     }
@@ -125,3 +129,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# This sets a default user model to be CustomUser instead of User
+
+AUTH_USER_MODEL = 'users.CustomUser'
