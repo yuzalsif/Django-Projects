@@ -34,7 +34,7 @@ class CustomUserModelTests(TestCase):
         )
 
         self.assertEqual(user.username, 'Bob')
-        self.assertEqual(user.email, 'bob@gamil.com')
+        self.assertEqual(user.email, 'bob@gmail.com')
         self.assertTrue(user.is_active)
         self.assertTrue(user.is_staff)
         self.assertTrue(user.is_superuser)
